@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="bg-image">
+    <div class="circle-image-left">
+        <img src="{{homePageCopy.backgroundCircleImagepath}}">
+    </div>
+    <!-- <div class="circle-image-right">
+        <img src="../../assets/images/blob-small.svg">
+    </div> -->
+</div>
+<div class="home-page-main-container">
+    <div class="first-container">
+        <div class="left-section">
+            <div class="headers">
+                {{homePageCopy.taglineAboveImage}}
+                <hr class="divider" align="left">
+            </div>
+            <div class="left-side-image">
+                <img src="{{homePageCopy.taglineImage}}">
+                <img class="dots-image" src="{{homePageCopy.dotsImage}}">
+            </div>
+        </div>
+        <div class="space-container"></div>
+        <div class="right-section">
+            <app-emi-calculator></app-emi-calculator>
+        </div>
+    </div>
+
+    <div class="second-section">
+        <div class="left-section">
+            <div class="thumbnail-container">
+                <ng-container *ngFor="let items of homePageCopy.thumbnail; let i=index">
+                    <div class="thumbnail-box" [class.thumbnail-first-row]="(i+1) % 2 != 0"
+                        [class.thumbnail-second-row]="(i+1) % 2 == 0" [class.thumbnail-space]="i > 0">
+                        <img src="{{items.img}}">
+                        <div class="thumbnail-title">
+                            {{items.title}}
+                        </div>
+                        <div class="thumbnail-description">
+                            {{items.description}}
+                        </div>
+                    </div>
+
+                </ng-container>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="cta-container">
+                <div class="headers">
+                    {{homePageCopy.cta.ctaTitle}}
+                    <hr class="divider-dark-gray" align="left">
+                </div>
+                <div class="cta-description">
+                    {{homePageCopy.cta.ctaSubtitle}}
+                </div>
+                <div class="cta-box">
+                    {{homePageCopy.cta.ctaButton}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

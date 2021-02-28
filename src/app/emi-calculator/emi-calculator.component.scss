@@ -1,0 +1,221 @@
+@import '../../assets/styles/base.scss';
+
+.emi-calculator-container {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+
+  .calculator-container {
+    border-radius: 30px;
+    background: $base-white;
+    width: 45%;
+    font-family: $font-montserrat;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    margin-left: auto;
+
+    .calculator-heading {
+      background-color: $base-light-whitsh-blue;
+      padding: 12px;
+      text-align: center;
+      border-radius: 30px 30px 0px 0px
+    }
+
+    .slider-container {
+      padding: 40px 30px 40px 50px;
+    }
+  }
+}
+
+.calculator-montly-income,
+.calculator-montly-expense,
+.calculator-repayment-tenure {
+  margin-bottom: 40px;
+}
+
+.slider-label {
+  font-size: $font-size-12;
+  color: $base-light-black;
+  font-weight: $font-weight-medium;
+}
+
+.slider-value {
+  font-size: $font-size-18;
+  color: $base-black;
+  font-weight: $font-weight-bold;
+
+}
+
+.calculator-existing-loans {
+  margin-bottom: 40px;
+  display: flex;
+
+  .existing-loans-text {
+    color: $base-font-black;
+    font-size: $font-size-12;
+  }
+
+  .existing-loans-toggle {
+    margin-left: auto;
+  }
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: $base-white !important;
+}
+
+::ng-deep .mat-slide-toggle-bar {
+  height: 19px !important;
+  border-radius: 20px !important;
+  width: 36px !important;
+}
+
+::ng-deep .mat-slide-toggle-thumb {
+  height: 15px !important;
+  /* top: 17px; */
+  margin-top: 1px !important;
+  width: 15px !important;
+  margin-left: 2px !important;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: $base-dark-purple !important;
+}
+
+::ng-deep .mat-slide-toggle-thumb-container {
+  top: 1px !important;
+}
+
+mat-slider {
+  width: 100%;
+  margin-bottom: -20px;
+}
+
+.calculated-container {
+  display: flex;
+  background-color: $base-dark-purple;
+  padding: 30px;
+  text-align: center;
+  margin: 10% 0% 10% 5px;
+  border-radius: 0px 20px 20px 0px;
+
+  .calculated-inner-container {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .amount-title {
+    color: white;
+
+    font-family: $font-montserrat;
+    font-size: $font-size-14;
+    // font-weight: $font-weight-medium;
+  }
+
+  .amount-calculated {
+    color: white;
+
+    font-family: $font-montserrat;
+    font-size: $font-size-20;
+    font-weight: $font-weight-bold;
+  }
+
+  .emi-container {
+    margin-top: 40px;
+  }
+
+  .get-money-button {
+    font-family: $font-montserrat;
+    color: $base-dark-purple;
+    background-color: $base-white;
+    font-family: $font-size-12;
+    margin-top: 40px;
+    padding: 10px 30px;
+    width: max-content;
+    border-radius: 70px;
+    cursor: pointer;
+  }
+  .get-money-button:hover {
+    color:$base-white;
+    background-color: $base-light-purple ;
+  }
+}
+
+::ng-deep .mat-accent .mat-slider-track-fill,
+.mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label {
+  background-color: $base-dark-purple !important;
+
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: $base-dark-purple !important;
+  border: solid 5px white !important;
+  height: 20px !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+::ng-deep .mat-slider:not(.mat-slider-disabled).cdk-mouse-focused .mat-slider-thumb,
+.mat-slider:not(.mat-slider-disabled).cdk-touch-focused .mat-slider-thumb,
+.mat-slider:not(.mat-slider-disabled).cdk-program-focused .mat-slider-thumb {
+  border-width: 0px !important;
+  transform: none !important;
+  height: 20px !important;
+
+}
+
+::ng-deep .mat-slider:not(.mat-slider-disabled).cdk-touch-focused.mat-slider-thumb {
+  border-width: 0px !important;
+  transform: none !important;
+}
+
+::ng-deep .mat-slider:not(.mat-slider-disabled).cdk-focused .mat-slider-thumb-label {
+  background-color: $base-dark-purple !important;
+  border: solid 5px white !important;
+  height: 20px !important;
+  transform: none !important;
+  border-radius: 5px 5px 0 !important;
+  width: 7rem !important;
+  right: 0px !important;
+  top: -30px !important;
+}
+
+.slider-values {
+  display: flex;
+
+  .left-min-value {
+    color: $base-font-dark-gray;
+    font-size: $font-size-12;
+  }
+
+  .right-min-value {
+    color: $base-font-dark-gray;
+    font-size: $font-size-12;
+    margin-left: auto;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white !important;
+  width: 100% !important;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+::ng-deep.mat-select-panel.mat-primary {
+  margin-top: 31px;
+}
+
+.select-label {
+  font-size: $font-size-20;
+}
+.bottom-image-container{
+    display: flex;
+    .dots-image{
+        margin-left: auto;
+        margin-top: -20px;
+        margin-right: -35px;
+        z-index: -1;
+    }
+}

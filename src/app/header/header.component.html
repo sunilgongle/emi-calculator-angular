@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="header-logo">
+        <img src="{{copyContent.header.logoPath}}" alt="Open Financial">
+    </div>
+
+    <div class="header-menu-items">
+        <div class="menu-items" *ngFor="let items of copyContent.header.menu">
+            {{items}}
+        </div>
+        <div class="action-buttons">
+            <div class="header-login-button">
+                {{copyContent.header.loginButton}}
+            </div>
+            <div class="header-get-started-button">
+                {{copyContent.header.signUpButton}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="emi-calculator-container">
+    <div class="calculator-container">
+        <div class="calculator-heading">
+            {{emiTextCopy.calculatorTitle}}
+        </div>
+        <div class="slider-container">
+            <div class="calculator-montly-income">
+                <div class="slider-label">
+                    {{emiTextCopy.monthlyIcomeTitle}}
+                </div>
+                <div class="slider-value">
+                    {{copyContent.rupeeSymbol}} {{monthlyIncome | number}}
+                </div>
+                <div class="slider">
+                    <mat-slider min="100000" max="300000" step="10000" (input)="getMothlyIncome($event)"></mat-slider>
+
+                    <div class="slider-values">
+                        <div class="left-min-value"> {{copyContent.rupeeSymbol}} {{emiTextCopy.minLoan | number}} </div>
+                        <div class="right-min-value"> {{copyContent.rupeeSymbol}} {{emiTextCopy.maxLoan | number }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-montly-expense">
+                <div class="slider-label">
+                    {{emiTextCopy.monthlyExpenseTitle}}
+                </div>
+                <div class="slider-value">
+                    {{copyContent.rupeeSymbol}} {{monthlyExpense | number}}
+                </div>
+                <div class="slider">
+                    <mat-slider min="0" max="{{monthlyIncome}}" step="1000" (input)="getMothlyExpense($event)">
+                    </mat-slider>
+                </div>
+            </div>
+
+            <div class="calculator-repayment-tenure">
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>{{emiTextCopy.repaymentTenureTitle}}</mat-label>
+                        <mat-select [(ngModel)]="tenure"  (ngModelChange)="getTenure()">
+                            <mat-option *ngFor="let emi of emiTextCopy.emiInstallments" [value]="emi.months">
+                                {{emi.label}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="calculator-existing-loans">
+                <div class="existing-loans-text">
+                    {{emiTextCopy.existingLoanTitle}}
+                </div>
+                <div class="existing-loans-toggle">
+                    <mat-slide-toggle (change)="getIsExistingLoans()"></mat-slide-toggle>
+
+                </div>
+            </div>
+
+
+            <div class="calculator-montly-incom3e">
+                <mat-form-field appearance="legacy">
+                    <mat-label>{{emiTextCopy.emiExistingLoanTitle}}</mat-label>
+                    <input matInput placeholder="{{copyContent.rupeeSymbol}}{{emiTextCopy.emiExistingPlaceholder | number}}" [disabled]="!isExistingLoans">
+                </mat-form-field>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="calculated-container">
+        <div class="calculated-inner-container">
+            <div class="loan-eligible-container">
+                <div class="amount-title">
+                    {{emiTextCopy.loanAmountTile}}
+                </div>
+                <div class="amount-calculated">
+                    {{copyContent.rupeeSymbol}} {{loanAmount | number}}
+                </div>
+            </div>
+            <div class="emi-container">
+                <div class="amount-title">
+                    {{emiTextCopy.emiavailable}}
+                </div>
+                <div class="amount-calculated">
+                    {{copyContent.rupeeSymbol}} {{emi | number}}
+                </div>
+            </div>
+            <div class="get-money-button">
+                {{emiTextCopy.getMoneyButtonTitle}}
+            </div>
+        </div>
+    </div>
+</div>
+   
+<div class="bottom-image-container">
+<div class="dots-image">
+<img src="{{copyContent.homePage.dotsImage}}">
+    </div>
+</div>

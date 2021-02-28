@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/styles/base.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: $font-montserrat;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background-image: url('assets/images/blob-small.svg'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    margin-right: auto;
+    background-size: contain;
+    background-position-x: 50vw;
+    background-position-y: -20vh;
+    background-size: 55%;
+    top: -33px;
+}
