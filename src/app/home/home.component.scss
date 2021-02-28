@@ -204,6 +204,7 @@ margin-top: 100px;
   width: max-content;
 }
 .cta-box:hover {
-    background-color: $base-dark-purple;
-color: $base-white;
-  }
+  background-color: $base-dark-purple;
+  color: $base-white;
+  cursor: pointer;
+}
